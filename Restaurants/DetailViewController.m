@@ -20,6 +20,7 @@
     
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
+    cuisineLabel.text = [restaurant cuisineType];
 }
 
 - (void)viewDidUnload

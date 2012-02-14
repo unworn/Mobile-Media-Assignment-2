@@ -9,10 +9,14 @@
 {
     NSString* address;
     NSString* name;
+    int yearOpened;
+    NSString* cuisineType;
     
 }
 @property(readwrite, strong) NSString* address;
 @property(readwrite, strong) NSString* name;
+@property(readwrite, strong) NSString* cuisineType;
+
 
 
 @end
