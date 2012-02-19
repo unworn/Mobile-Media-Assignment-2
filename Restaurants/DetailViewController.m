@@ -10,6 +10,8 @@
 @synthesize addressLabel;
 @synthesize navigationHeader;
 @synthesize cuisineLabel;
+@synthesize chefLabel;
+@synthesize yearLabel;
 
 #pragma mark - View lifecycle
 
@@ -17,10 +19,11 @@
 {
     [super viewDidLoad];
     restaurant = [[Restaurant alloc] init];
-    
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
     cuisineLabel.text = [restaurant cuisineType];
+    chefLabel.text = [restaurant chefName];
+    yearLabel.text = [NSString stringWithFormat:@"%i (%i years ago)", restaurant.yearOpened, [restaurant age]];
 }
 
 - (void)viewDidUnload
@@ -28,6 +31,8 @@
     [self setAddressLabel:nil];
     [self setNavigationHeader:nil];
     [self setCuisineLabel:nil];
+    [self setChefLabel:nil];
+    [self setYearLabel:nil];
     [super viewDidUnload];
 }
 
